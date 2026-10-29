@@ -1,8 +1,18 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@layer base {
-  body {
-    @apply bg-slate-900 text-slate-100;
-  }
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+@font-face {
+  font-family: 'Daemones';
+  src: url('./src/fonts/daemones.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@utility font-daemones {
+  font-family: 'Daemones', sans-serif;
 }
