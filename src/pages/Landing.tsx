@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+
 export default function Landing() {
   return (
     <div className="min-h-screen text-white bg-black px-8 py-20">
@@ -46,9 +48,12 @@ export default function Landing() {
               Regardless, I don't plan on halting my curiosity and exploration for this world anytime soon.
             </p>
           </div>
+          {/* Footer Component */}
+          <Footer />
         </main>
 
       </div>
     </div>
   );
 }
+
