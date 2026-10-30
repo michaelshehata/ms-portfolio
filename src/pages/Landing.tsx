@@ -30,7 +30,7 @@ export default function Landing() {
           </h1>
 
           {/* Bio */}
-          <div className="space-y-6 text-neutral-300 text-base leading-relaxed max-w-2xl">
+          <div className="space-y-6 text-neutral-300 text-base md:text-lg leading-relaxed max-w-2xl font-ltc font-normal tracking-normal">
             <p>
               21 year old hailing from Egypt. 
               I mostly develop things I deem useful, and make music.

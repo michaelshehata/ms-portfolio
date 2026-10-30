@@ -13,6 +13,18 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'ltc';
+  src: url('/fonts/ltc.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @utility font-daemones {
   font-family: 'Daemones', sans-serif;
 }
+
+@utility font-ltc {
+  font-family: 'ltc', sans-serif;
+}
+
