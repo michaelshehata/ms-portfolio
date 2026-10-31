@@ -11,7 +11,7 @@ export default function Footer() {
       {/* Social / Contact Icons */}
       <div className="flex items-center gap-4 text-lg">
         <a 
-          href="mailto:your-email@example.com" 
+          href="mailto:michael.efshehata@gmail.com" 
           aria-label="Email"
           className="hover:text-white transition-colors"
         >
@@ -27,7 +27,7 @@ export default function Footer() {
           <FaGithub />
         </a>
         <a 
-          href="https://linkedin.com/in/yourhandle" 
+          href="https://linkedin.com/in/michaelehabshehata" 
           target="_blank" 
           rel="noopener noreferrer" 
           aria-label="LinkedIn"
