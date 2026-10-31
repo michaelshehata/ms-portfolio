@@ -34,8 +34,8 @@ export default function Landing() {
             <p>
               21 year old hailing from Egypt. 
               I mostly develop things I deem useful, and make music.
-              I've had great success with music and want to enjoy that much success in my development career.
-              I've been taught to work hard and enjoy what I did, there isn't much space on earth for anything else.
+              I've had great success with music and want to enjoy that much success in my developer career.
+              I've been taught to work hard and enjoy what I do, there isn't much space for anything else in my mind.
               Check the sections to the left to find out more about my work and what I like to do with 
               my time on this planet.
             </p>
@@ -44,7 +44,7 @@ export default function Landing() {
               early on in my life. I've been creating cool stuff ever since in many disciplnes.
               I'm also very fortunate to have explored different parts of the world and interacted with many.
               It's deeply exciting being young and having the world as a blank canvas, even though it does 
-              induce remarkable anxiety at times, if I'am to honest.
+              induce remarkable anxiety at times, if I'am honest.
               Regardless, I don't plan on halting my curiosity and exploration for this world anytime soon.
             </p>
           </div>
