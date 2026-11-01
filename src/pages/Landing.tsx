@@ -1,35 +1,67 @@
+import { useState, useEffect } from "react";
 import Footer from "../components/Footer";
 
 export default function Landing() {
+  const [activeHash, setActiveHash] = useState("#about");
+
+  useEffect(() => {
+    // Set initial hash or default to #about
+    if (window.location.hash) {
+      setActiveHash(window.location.hash);
+    }
+
+    const handleHashChange = () => {
+      setActiveHash(window.location.hash || "#about");
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
+  const navItems = [
+    { name: "About", href: "#about" },
+    { name: "Writing", href: "#writing" },
+    { name: "Misc", href: "#misc" },
+  ];
+
   return (
-    <div className="min-h-screen text-white bg-black px-8 py-20">
+    <div className="min-h-screen text-white bg-black px-8 py-20 flex flex-col justify-between">
       {/* Centered container */}
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[180px_1fr] gap-16">
+      <div className="max-w-5xl mx-auto w-full grid grid-cols-1 md:grid-cols-[180px_1fr] gap-16">
         
         {/* Sidebar Navigation */}
         <aside className="flex flex-col gap-8">
-          {/* Navigation */}
-          <nav className="flex flex-col gap-3 text-sm text-neutral-400">
-            <a href="#about" className="text-white-400 font-medium flex items-center gap-2">
-              <span className="text-xs">•</span> About
-            </a>
-            <a href="#writing" className="hover:text-white transition-colors">
-              Writing
-            </a>
-            <a href="#misc" className="hover:text-white transition-colors">
-              Misc
-            </a>
+          <nav className="flex flex-col gap-3 text-sm">
+            {navItems.map((item) => {
+              const isActive = activeHash === item.href;
+              return (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className={`group flex items-center gap-2 transition-colors ${
+                    isActive ? "text-white font-medium" : "text-neutral-400 hover:text-white"
+                  }`}
+                >
+                  <span
+                    className={`h-1.5 w-1.5 rounded-full bg-white transition-opacity ${
+                      isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                    }`}
+                  />
+                  {item.name}
+                </a>
+              );
+            })}
           </nav>
         </aside>
 
-        
+        {/* Main Content */}
         <main className="space-y-8">
-          {/*  Name */}
+          {/* Header Name */}
           <h1 className="font-daemones text-3xl font-normal tracking-wide">
             MICHAEL SHEHATA
           </h1>
 
-          {/* Bio */}
+          {/* Bio Text */}
           <div className="space-y-6 text-neutral-300 text-base md:text-lg leading-relaxed max-w-2xl font-ltc font-normal tracking-normal">
             <p>
               21 year old hailing from Egypt. 
@@ -41,13 +73,14 @@ export default function Landing() {
             </p>
             <p>
               I'm extremely lucky to have had access to a laptop and an internet connection 
-              early on in my life. I've been creating cool stuff ever since in many disciplnes.
+              early on in my life. I've been creating cool stuff ever since in many disciplines.
               I'm also very fortunate to have explored different parts of the world and interacted with many.
               It's deeply exciting being young and having the world as a blank canvas, even though it does 
-              induce remarkable anxiety at times, if I'am honest.
+              induce remarkable anxiety at times, if I'm honest.
               Regardless, I don't plan on halting my curiosity and exploration for this world anytime soon.
             </p>
           </div>
+
           {/* Footer Component */}
           <Footer />
         </main>
@@ -56,4 +89,3 @@ export default function Landing() {
     </div>
   );
 }
-
