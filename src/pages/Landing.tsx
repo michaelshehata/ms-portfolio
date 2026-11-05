@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import {Link} from "react-router-dom";
 import Footer from "../components/Footer";
 
 export default function Landing() {
@@ -20,7 +21,8 @@ export default function Landing() {
 
   const navItems = [
     { name: "About", href: "#about" },
-    { name: "Writing", href: "#writing" },
+    { name: "Projects", href: "#writing" },
+    { name: "Music", href: "#music" },
     { name: "Misc", href: "#misc" },
   ];
 
